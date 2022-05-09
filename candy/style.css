@@ -1,0 +1,72 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  height: 70px;
+  width: 70px;
+}
+
+.contains {
+  display: flex;
+  align-items: center;
+}
+
+.score-board {
+  background: #eee;
+  box-shadow: 0 8px 8px -4px lightblue;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0px 50px 0px 50px;
+  margin-left: 15px;
+}
+
+#score-label {
+  display: inline-block;
+}
+
+#score {
+  display: inline-block;
+}
+
+button {
+  background: #1aab8a;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 60px;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  margin: 20px;
+}
+button:hover {
+  background: #fff;
+  color: #1aab8a;
+}
+button:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #1aab8a;
+  transition: 400ms ease all;
+}
+button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+button:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
